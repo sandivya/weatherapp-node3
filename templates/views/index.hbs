@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Home</title>
+    {{>head}}
+</head>
+<body>
+
+    <div class="main-content">
+            {{>header}}
+            
+            <form align='center'>
+                <p><strong>Get temprature and humidity for your location</strong></p><br>
+                <input placeholder="Enter Location">
+                <button>Show Weather</button><br>
+                <p align='center'><font style="font-size: 13px;" color='red'><strong>   {{error}}   </strong></font></p>
+            </form>
+            
+            <p id="js-loc-err" align='center'></p>
+            <p id="js-temp-humid" align='center'></p>
+    </div>
+
+    {{>footer}}
+    <script src='/js/app.js'></script>
+</body>
+</html>
