@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', (e) => {
     js_loc_err.textContent = 'Loading...'
     js_temp_humid.textContent = ''
 
-    fetch('http://localhost:3000/weather?location=' + locationQuery.value).then((response) => {
+    fetch('/weather?location=' + locationQuery.value).then((response) => {
         response.json().then((data) => {
 
             if (data.error){

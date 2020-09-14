@@ -9,6 +9,8 @@ const hbs_views = path.join(__dirname, '../templates/views')
 const hbs_partials = path.join(__dirname, '../templates/partials')
 
 const app = express() //Instantiate express
+const port = process.env.PORT || 3000
+
 app.use(express.static(html_path)) //load static files
 app.set('view engine', 'hbs') //Load handlebar engine
 app.set('views', hbs_views) //Setup hbs file location
@@ -74,8 +76,8 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server up on port 3000')
+app.listen(port, () => {
+    console.log('Server up on port :', port)
 })
 
 
