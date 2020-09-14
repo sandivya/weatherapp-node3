@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
             }
             else{
                 js_loc_err.innerHTML = ("<br>Your selected location is : <b>" + locationQuery.value + '</b>')
-                js_temp_humid.innerHTML = ("Temprature : <b>" + data.temprature + '°C</b><br>Humidity : <b>' + data.humidity + '%</b>')
+                js_temp_humid.innerHTML = ("Temperature : <b>" + data.temprature + '°C</b><br>Humidity : <b>' + data.humidity + '%</b>')
             }
         })
     })
